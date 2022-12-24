@@ -116,6 +116,7 @@ class ECBF_control():
                 sol = solve_qp(P, q, G, h)
                 optimized_u = sol['x']
                 # Solution to Exercise 3
+                optimized_u += np.random.random()*np.linalg.norm(optimized_u)*.1
 
             except:
                 print("Robot "+str(id)+": NO SOLUTION!!!")
