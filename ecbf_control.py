@@ -109,7 +109,12 @@ class ECBF_control():
                 optimized_u = u_des #! REPLACE!! Exercise 1: Write Minimum Interventional Control
 
                 # Solution to Exercise 1
-
+                P = np.eye(2)
+                q = -1 * u_des
+                G = A
+                h = b
+                sol = solve_qp(P, q, G, h)
+                optimized_u = sol['x']
                 # Solution to Exercise 3
 
             except:
