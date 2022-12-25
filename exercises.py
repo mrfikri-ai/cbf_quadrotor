@@ -33,7 +33,6 @@ def main():
 
     #! EXERCISE 3: CREATE DEADLOCK WITH 4 ROBOTS (No Obstacle), FIX IT
 
-
     Robots = [Robot0, Robot1, Robot2, Robot3] #! E2: Append with new robots
     a, ax1 = plt.subplots()
     
@@ -44,7 +43,7 @@ def main():
     obs = np.hstack((obs1, obs2)).T 
     # obs = []   
 
-    for tt in range(20000):
+    for tt in range(5000):
 
         obstacles = []
         for robot in Robots:

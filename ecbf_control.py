@@ -37,15 +37,12 @@ class ECBF_control():
         z = z / (obs.shape[1]-1)
         p = {"x":plot_x, "y":plot_y, "z":z}
         return p
-        
-        
+   
     def plot_h(self, plot_x, plot_y, z):
         h = plt.contourf(plot_x, plot_y, z, [-1, 0, 1],colors=['#808080', '#A0A0A0', '#C0C0C0'])
         plt.xlabel("X")
         plt.ylabel("Y")
         plt.pause(0.00000001)
-
-
 
     def compute_h(self, obs=np.array([[0], [0]]).T):
         h = np.zeros((obs.shape[1], 1))
