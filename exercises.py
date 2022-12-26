@@ -21,27 +21,28 @@ def main():
 
     #! EXERCISE 2: ADD 2 More Robots (4 in Total). Don't overlap + ADD some obstacles
 
-    ### Define Robot 2
-    x_init2 = np.array([5, 0, 10])
-    goal_init2 =np.array([[-6], [0]])
-    Robot2 = Robot_Sim(x_init2, goal_init2, robot_id=2)
+    # ### Define Robot 2
+    # x_init2 = np.array([5, 0, 10])
+    # goal_init2 =np.array([[-6], [0]])
+    # Robot2 = Robot_Sim(x_init2, goal_init2, robot_id=2)
     
-    ### Define Robot 3
-    x_init3 =np.array([-5, 0, 10])
-    goal_init3 =np.array([[6], [0]])
-    Robot3 = Robot_Sim(x_init3, goal_init3, robot_id=3)
+    # ### Define Robot 3
+    # x_init3 =np.array([-5, 0, 10])
+    # goal_init3 =np.array([[6], [0]])
+    # Robot3 = Robot_Sim(x_init3, goal_init3, robot_id=3)
 
     #! EXERCISE 3: CREATE DEADLOCK WITH 4 ROBOTS (No Obstacle), FIX IT
 
-    Robots = [Robot0, Robot1, Robot2, Robot3] #! E2: Append with new robots
+    Robots = [Robot0, Robot1]
+    # Robots = [Robot0, Robot1, Robot2, Robot3] #! E2: Append with new robots
     a, ax1 = plt.subplots()
     
     ## Define Obstacles
     obs1 = np.array([[2], [2]])
     obs2 = np.array([[-2], [-2]])
 
-    obs = np.hstack((obs1, obs2)).T 
-    # obs = []   
+    # obs = np.hstack((obs1, obs2)).T 
+    obs = []   
 
     for tt in range(5000):
 
