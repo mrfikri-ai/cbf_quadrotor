@@ -10,13 +10,13 @@ def main():
     #! EXERCISE 1: FILL OUT ECBF_CONTROL.PY compute_safe_control()
     
     ### Define Robot 0
-    x_init0 = np.array([0, -5, 10])
-    goal_init0 =np.array([[0], [6]])
+    x_init0 = np.array([-6, -6, 10])
+    goal_init0 =np.array([[6], [6]])
     Robot0 = Robot_Sim(x_init0, goal_init0, robot_id=0)
     
     ### Define Robot 1
-    x_init1 =np.array([0, 5, 10])
-    goal_init1 =np.array([[0], [-6]])
+    x_init1 =np.array([6, 6, 10])
+    goal_init1 =np.array([[-6], [-6]])
     Robot1 = Robot_Sim(x_init1, goal_init1, robot_id=1)
 
     #! EXERCISE 2: ADD 2 More Robots (4 in Total). Don't overlap + ADD some obstacles
