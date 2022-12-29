@@ -11,30 +11,30 @@ def main():
     
     ### Define Robot 0
     x_init0 = np.array([-6, -6, 10])
-    goal_init0 =np.array([[6], [6]])
+    goal_init0 =np.array([[0], [0]])
     Robot0 = Robot_Sim(x_init0, goal_init0, robot_id=0)
     
     ### Define Robot 1
     x_init1 =np.array([6, 6, 10])
-    goal_init1 =np.array([[-6], [-6]])
+    goal_init1 =np.array([[0], [0]])
     Robot1 = Robot_Sim(x_init1, goal_init1, robot_id=1)
 
     #! EXERCISE 2: ADD 2 More Robots (4 in Total). Don't overlap + ADD some obstacles
 
     # ### Define Robot 2
-    # x_init2 = np.array([5, 0, 10])
-    # goal_init2 =np.array([[-6], [0]])
-    # Robot2 = Robot_Sim(x_init2, goal_init2, robot_id=2)
+    x_init2 = np.array([5, 0, 10])
+    goal_init2 =np.array([[0], [0]])
+    Robot2 = Robot_Sim(x_init2, goal_init2, robot_id=2)
     
     # ### Define Robot 3
-    # x_init3 =np.array([-5, 0, 10])
-    # goal_init3 =np.array([[6], [0]])
-    # Robot3 = Robot_Sim(x_init3, goal_init3, robot_id=3)
+    x_init3 =np.array([-5, 0, 10])
+    goal_init3 =np.array([[0], [0]])
+    Robot3 = Robot_Sim(x_init3, goal_init3, robot_id=3)
 
     #! EXERCISE 3: CREATE DEADLOCK WITH 4 ROBOTS (No Obstacle), FIX IT
 
-    Robots = [Robot0, Robot1]
-    # Robots = [Robot0, Robot1, Robot2, Robot3] #! E2: Append with new robots
+    # Robots = [Robot0, Robot1]
+    Robots = [Robot0, Robot1, Robot2, Robot3] #! E2: Append with new robots
     a, ax1 = plt.subplots()
     
     ## Define Obstacles
